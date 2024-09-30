@@ -8,7 +8,7 @@ export const initialize = (api: PrimariaApi) => {
     factory: () =>  Promise.resolve(new MyElement()) ,
   }, "Lit plugin");
   
-  api.regionManager.registerQuickAction({
+  api.regionManager.registerView(shellRegions.navigationMenu,{
     id: "plugin-quick-action",
     factory: () => Promise.resolve(new PrimariaMenuItem("add_circle_outline", "Lit plugin", () => {
       api.regionManager.activateMainView("plugin-main-view")
@@ -19,5 +19,6 @@ export const initialize = (api: PrimariaApi) => {
 export const dispose = (api: PrimariaApi) => {
   console.log(`Plugin ${api.pluginInfo.pluginId} disposed`);
   api.regionManager.removeView(shellRegions.main, "plugin-main-view");
+  api.regionManager.removeView(shellRegions.navigationMenu, "plugin-quick-action");
   return Promise.resolve();
 }
