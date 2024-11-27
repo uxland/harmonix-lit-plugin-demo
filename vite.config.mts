@@ -11,7 +11,7 @@ export default ({ mode }) => {
     build: {
       lib: {
         // Could also be a dictionary or array of multiple entry points
-        entry: "./src/main.ts",
+        entry: "./src/plugin.ts",
         // the proper extensions will be added
         fileName: "index",
         name: pkg.name,
