@@ -1,6 +1,5 @@
 import { PrimariaApi, PrimariaNavItem, shellRegions } from "@uxland/primary-shell";
 import { MyElement } from "./my-element";
-import { QuickActionButton } from "./components/quick-action-button/quick-action-button";
 
 export const initialize = (api: PrimariaApi) => {
   console.log(`Plugin ${api.pluginInfo.pluginId} initialized`);
@@ -14,18 +13,13 @@ export const initialize = (api: PrimariaApi) => {
     factory: () => {
       const menuItem = new PrimariaNavItem({
         icon: "add_box",
-        label: "Plugin Sidebar",
+        label: "Lit plugin",
         callbackFn: () => {
+          api.regionManager.activateMainView("plugin-main-view")
         },
       });
       return Promise.resolve(menuItem);
     },
-  });
-  api.regionManager.registerView(shellRegions.quickActions,{
-    id: "plugin-quick-action",
-    factory: () => Promise.resolve(new QuickActionButton("Lit plugin", () => {
-      api.regionManager.activateMainView("plugin-main-view")
-    })),
   });
   return Promise.resolve();
 };
