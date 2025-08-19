@@ -29,7 +29,5 @@ export const dispose = (api: PrimariaApi) => {
   api.regionManager.removeView(main, "plugin-main-view");
   const navigationMenu = api.regionManager.regions.shell.main;
   api.regionManager.removeView(navigationMenu, "plugin-sidebar");
-  const quickActions = api.regionManager.regions.shell.quickActions;
-  api.regionManager.removeView(quickActions, "plugin-quick-action");
   return Promise.resolve();
 }
