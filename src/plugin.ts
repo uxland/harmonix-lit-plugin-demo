@@ -1,4 +1,4 @@
-import { PrimariaApi, PrimariaNavItem, shellRegions } from "@uxland/primary-shell";
+import { PrimariaApi, PrimariaNavItem } from "@uxland/primary-shell";
 import { MyElement } from "./my-element";
 
 export const initialize = (api: PrimariaApi) => {
@@ -7,8 +7,8 @@ export const initialize = (api: PrimariaApi) => {
     id: "plugin-main-view",
     factory: () =>  Promise.resolve(new MyElement()) ,
   },);
-  
-  api.regionManager.registerView(shellRegions.navigationMenu,{
+  const navigationMenu = api.regionManager.regions.shell.navigationMenu
+  api.regionManager.registerView(navigationMenu,{
     id: "plugin-sidebar",
     factory: () => {
       const menuItem = new PrimariaNavItem({
@@ -25,8 +25,11 @@ export const initialize = (api: PrimariaApi) => {
 };
 export const dispose = (api: PrimariaApi) => {
   console.log(`Plugin ${api.pluginInfo.pluginId} disposed`);
-  api.regionManager.removeView(shellRegions.main, "plugin-main-view");
-  api.regionManager.removeView(shellRegions.navigationMenu, "plugin-sidebar");
-  api.regionManager.removeView(shellRegions.quickActions, "plugin-quick-action");
+  const main = api.regionManager.regions.shell.main;
+  api.regionManager.removeView(main, "plugin-main-view");
+  const navigationMenu = api.regionManager.regions.shell.main;
+  api.regionManager.removeView(navigationMenu, "plugin-sidebar");
+  const quickActions = api.regionManager.regions.shell.quickActions;
+  api.regionManager.removeView(quickActions, "plugin-quick-action");
   return Promise.resolve();
 }
