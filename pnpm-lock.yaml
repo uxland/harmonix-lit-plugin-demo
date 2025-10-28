@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@uxland/primary-shell':
-        specifier: ^7.1.3
-        version: 7.1.3
+        specifier: ^7.13.2
+        version: 7.16.0
       lit:
         specifier: ^3.1.4
         version: 3.3.1
@@ -289,8 +289,8 @@ packages:
   '@uxland/lit-utilities@1.0.0':
     resolution: {integrity: sha512-zypSEO2tivQ8+OG3TTq5X/8BU1b09POnjS5S1K5PiWy4jnJzD9JwGEF3vX4btRMafBzIpzI4FiRbLiwR2lRTYA==}
 
-  '@uxland/primary-shell@7.1.3':
-    resolution: {integrity: sha512-Byrq/KA+e4yrx1tqmadWfHYIMKia3T3mIp5vLVgj/y8F4Y7LuDgb37wQkhSO+mdj6aY53RO8fbQm58AYYGInMA==}
+  '@uxland/primary-shell@7.16.0':
+    resolution: {integrity: sha512-deI68xlGH3QfAsmahLxGkul9EH/Hez3fv1777TBiluufhF7WZNAHhZMaWAAv6Ep7nFd0vJmJ8Jz3hrAfqlFQtw==}
 
   '@uxland/ramda-extensions@1.0.3':
     resolution: {integrity: sha512-TG9Yi1mZoV8oSYZj+zBeIGTOFdY/rxHPQeM0rbB1uI9u4DeKdAHZfU4XthpKs41bwn31gYy9MQ4MBQwPOqdKvg==}
@@ -564,7 +564,7 @@ snapshots:
       lit: 2.8.0
       ramda: 0.27.2
 
-  '@uxland/primary-shell@7.1.3':
+  '@uxland/primary-shell@7.16.0':
     dependencies:
       '@uxland/harmonix': 1.1.1
       '@uxland/harmonix-adapters': 1.2.2
