@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@uxland/primary-shell": "^7.13.2",
-    "@uxland/regions": "^7.13.2",
+    "@uxland/regions": "^1.0.0",
     "lit": "^3.1.4"
   },
   "devDependencies": {
