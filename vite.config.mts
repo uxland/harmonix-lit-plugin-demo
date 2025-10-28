@@ -19,11 +19,12 @@ export default ({ mode }) => {
       },
       
       rollupOptions: {
-        external: ["lit",   "@uxland/primary-shell"],
+        external: ["lit",   "@uxland/primary-shell", "@uxland/regions"],
         output: {
           globals: {
             lit: "lit",
             "@uxland/primary-shell": "@uxland/primary-shell",
+            "@uxland/regions": "@uxland/regions",
           },
           inlineDynamicImports: true, // Incluye todas las importaciones dinámicas en un solo archivo
           manualChunks: undefined, // Desactiva la fragmentación para generar un solo archivo
