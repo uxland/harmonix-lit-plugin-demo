@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@uxland/primary-shell": "^7.20.0",
-    "@uxland/regions": "^1.0.0",
+    "@uxland/primary-shell": "^7.46.6",
     "lit": "^3.1.4"
   },
   "devDependencies": {
+    "@types/node": "^26.1.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }
