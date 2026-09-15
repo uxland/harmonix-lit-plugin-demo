@@ -326,4 +326,3 @@ export {
   J as dispose,
   H as initialize
 };
-//# sourceMappingURL=index.js.map
