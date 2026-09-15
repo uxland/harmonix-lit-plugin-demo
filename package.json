@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@uxland/primary-shell": "8.0.0-rc.0",
+    "@uxland/primary-shell": "8.0.0-rc.2",
     "lit": "^3.1.4"
   },
   "devDependencies": {
