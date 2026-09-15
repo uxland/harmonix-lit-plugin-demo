@@ -15,8 +15,8 @@ export const executeInjectHistoryItemsTask = (api: PrimariaApi) => {
 		componentFactory: (props: { item: IActivityHistoryItem }) =>
 			activityHistoryItemFactory({ item: props.item }),
 		errorMessage: "Error plugin demo",
-		searchPredicate: (searchString: string, item: IActivityHistoryItem) =>
-			!!item.content?.plainText?.toLowerCase().includes(searchString.toLowerCase())
+		searchPredicate: (searchString: string, item: any) =>
+			item.title.toLowerCase().includes(searchString.toLowerCase())
 	};
 	api.broker.send(
 		api.broker.events.activityHistory.injectAsyncHistoryItemsRequest,
