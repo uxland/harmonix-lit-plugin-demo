@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@uxland/primary-shell": "^8.0.0",
+    "@uxland/primary-shell": "^8.0.1",
     "lit": "^3.1.4"
   },
   "devDependencies": {
