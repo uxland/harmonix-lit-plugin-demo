@@ -26,10 +26,7 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-         <dss-datepicker inputsize="lg" class="date-picker">
-            <label slot="label" for="myDatepicker">Go to Date</label>
-            <input slot="input" id="myDatepicker" type="text" class="dss-input">
-          </dss-datepicker>
+        <dss-datepicker class="date-picker" size="lg" label="Go to Date"></dss-datepicker>
         <a href="https://vitejs.dev" target="_blank">
           <img src=${viteLogo} class="logo" alt="Vite logo" />
         </a>
